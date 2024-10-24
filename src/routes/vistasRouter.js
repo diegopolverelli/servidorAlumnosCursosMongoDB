@@ -29,13 +29,13 @@ router.get('/alumno/:aid',async(req,res)=>{
         }
         // recorrer alumno.cursando y completar nombre del curso
         let cursos=await CursosManager.getCursos()
-        console.log(alumno.cursando)
-        console.log(cursos)
+        // console.log(alumno.cursando)
+        // console.log(cursos)
         alumno.cursando.forEach(c=>{
-            console.log(`busca ${c.id}`)
+            // console.log(`busca ${c.id}`)
             let dataCurso=cursos.find(curso=>String(curso._id)==String(c.id))
             if(dataCurso){
-                console.log(`Encontro...!!!`)
+                // console.log(`Encontro...!!!`)
                 c.nombre=dataCurso.nombre
             }
         })

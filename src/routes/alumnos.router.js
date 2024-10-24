@@ -83,8 +83,8 @@ router.post("/:aid/curso/:cid", async(req, res)=>{
 
     try {
         let alumnos=await AlumnosManager.getAlumnos()
-        console.log(alumnos)
-        console.log(aid)
+        // console.log(alumnos)
+        // console.log(aid)
         let alumno=alumnos.find(a=>a._id==aid)
         if(!alumno){
             res.setHeader('Content-Type','application/json');
